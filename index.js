@@ -14,10 +14,14 @@ function promptUser() {
         validate: (input) => {
           return input.length <= 3 ? true : 'Please enter up to three characters.';
         },
-      }, {
+      },
+      {
         type: 'input',
         name: 'textColor',
         message: 'Enter the text color (keyword or hexadecimal number):',
+        validate: (input) => {
+          return input.trim() !== '' ? true : 'Please enter a valid text color.';
+        },
       },
       {
         type: 'list',
@@ -29,14 +33,15 @@ function promptUser() {
         type: 'input',
         name: 'shapeColor',
         message: 'Enter the shape color (keyword or hexadecimal number):',
+        validate: (input) => {
+          return input.trim() !== '' ? true : 'Please enter a valid shape color.';
+        },
       },
     ])
     .then((answers) => {
       const { text, textColor, shape, shapeColor } = answers;
 
       let svgContent = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">`;
-
-      svgContent += `<text x="150" y="100" fill="${textColor}" text-anchor="middle">${text}</text>`;
 
       // Create the shape of the user logo
       const shapeObject =
@@ -51,6 +56,8 @@ function promptUser() {
 
       svgContent += shapeObject.render();
 
+      svgContent += `<text x="150" y="100" fill="${textColor}" text-anchor="middle">${text}</text>`;
+
       svgContent += '</svg>';
 
       createSVGFile(svgContent);
@@ -58,3 +65,4 @@ function promptUser() {
 }
 
 promptUser();
+
