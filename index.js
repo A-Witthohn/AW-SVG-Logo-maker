@@ -43,7 +43,7 @@ function promptUser() {
 
 
         //Creates the shape of user logo
-        const shapeobject = {
+        const shapeObject = {
             circle: new Circle(),
             triangle: new Triangle(),
             square: new Square(),
