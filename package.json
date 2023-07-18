@@ -1,0 +1,16 @@
+{
+    "name": "svg-logo-generator",
+    "version": "1.0.0",
+    "description": "The purpose of this tool is to allow a user to create a simple logo from the command line. ",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "inquirer": "^8.0.0"
+    },
+    "devDependencies": {
+      "jest": "^27.0.6"
+    }
+  }
