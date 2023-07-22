@@ -30,10 +30,14 @@ N/A
 
 
 ## Contributing
-undefined
+N/A
 
 ## Tests
 to test the application run NPM test. 
+
+
+## Video Submission
+https://drive.google.com/file/d/1DrcEwAqhvbZbOugUnXq_79bImFdyPY1I/view
 
 ## Questions
 For additional questions, you can reach me via:
